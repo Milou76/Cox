@@ -95,7 +95,6 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             padding: 1.5rem;
             margin-bottom: 1.5rem;
-            width: 100%;
         }
         
         .section h2 {
@@ -162,6 +161,19 @@
             margin-top: 2rem;
         }
         
+        /* Menu hamburger pour mobile */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
         @media (max-width: 768px) {
             .banner {
                 font-size: 1.8rem;
@@ -177,6 +189,11 @@
             
             .section {
                 padding: 1rem;
+                min-width: calc(100% - 2rem);
+            }
+            
+            #contact {
+                max-width: 100%;
             }
             
             .ane {
@@ -187,22 +204,37 @@
             .ane-img {
                 height: 180px;
             }
-        }
-        
-        @media (max-width: 480px) {
-            .banner {
-                font-size: 1.5rem;
+            
+            /* Changements pour le menu responsive */
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            nav ul.show {
+                display: flex;
             }
             
             nav li {
-                margin: 0.3rem;
                 width: 100%;
                 text-align: center;
+                margin: 0.3rem 0;
             }
             
             nav a {
                 display: block;
                 padding: 0.5rem 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .banner {
+                font-size: 1.5rem;
             }
             
             .intro h1 {
@@ -216,6 +248,10 @@
             .section h2 {
                 font-size: 1.3rem;
             }
+            
+            .contact-info {
+                padding: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -226,7 +262,8 @@
     </header>
     
     <nav>
-        <ul>
+        <button class="menu-toggle" id="menuToggle">Menu ▼</button>
+        <ul id="menu">
             <li><a href="#association">L'Association</a></li>
             <li><a href="#anes">Nos Ânes</a></li>
             <li><a href="#balades">Les Balades</a></li>
@@ -331,5 +368,27 @@
         <p>&copy; 2025 Association "De la Cox à l'âne" - Petit Suzay (27)</p>
         <p>Site réalisé avec ♥ pour partager notre passion des ânes et de la nature</p>
     </footer>
+
+    <script>
+        // Script pour le menu hamburger
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('menu');
+            
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('show');
+                menuToggle.textContent = menu.classList.contains('show') ? 'Menu ▲' : 'Menu ▼';
+            });
+            
+            // Fermer le menu après avoir cliqué sur un lien
+            const menuLinks = document.querySelectorAll('#menu a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    menu.classList.remove('show');
+                    menuToggle.textContent = 'Menu ▼';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
