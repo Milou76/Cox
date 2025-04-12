@@ -43,10 +43,11 @@
             padding: 0;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         
         nav li {
-            margin: 0 1rem;
+            margin: 0.5rem 1rem;
         }
         
         nav a {
@@ -54,6 +55,7 @@
             text-decoration: none;
             font-weight: bold;
             padding: 0.5rem;
+            display: block;
         }
         
         nav a:hover {
@@ -64,12 +66,12 @@
         main {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1rem;
         }
         
         .intro {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         .intro p {
@@ -82,17 +84,18 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            gap: 2rem;
+            gap: 1rem;
         }
         
         .section {
             flex: 1;
-            min-width: 300px;
+            min-width: 280px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             padding: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            width: 100%;
         }
         
         .section h2 {
@@ -126,6 +129,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+        }
+        
+        .ane-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .ane h3 {
@@ -154,16 +164,57 @@
         
         @media (max-width: 768px) {
             .banner {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
-            nav ul {
-                flex-direction: column;
-                align-items: center;
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            main {
+                padding: 0.5rem;
+            }
+            
+            .section {
+                padding: 1rem;
+            }
+            
+            .ane {
+                min-width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .ane-img {
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .banner {
+                font-size: 1.5rem;
             }
             
             nav li {
-                margin: 0.5rem 0;
+                margin: 0.3rem;
+                width: 100%;
+                text-align: center;
+            }
+            
+            nav a {
+                display: block;
+                padding: 0.5rem 0;
+            }
+            
+            .intro h1 {
+                font-size: 1.5rem;
+            }
+            
+            .intro p {
+                font-size: 1rem;
+            }
+            
+            .section h2 {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -173,7 +224,7 @@
         <div class="banner">De la Cox à l'âne</div>
         <div class="tagline">Balades en calèche à Petit Suzay (27)</div>
     </header>
-
+    
     <nav>
         <ul>
             <li><a href="#association">L'Association</a></li>
