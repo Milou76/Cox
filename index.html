@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De la Cox à l'âne - Balades en calèche à Petit Suzay</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f1e6;
+            color: #333;
+        }
+        
+        header {
+            background-color: #6b8e23;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+        }
+        
+        .banner {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        
+        nav {
+            background-color: #4a6116;
+            padding: 0.5rem;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem;
+        }
+        
+        nav a:hover {
+            background-color: #6b8e23;
+            border-radius: 4px;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sections {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        
+        .section {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section h2 {
+            color: #6b8e23;
+            border-bottom: 2px solid #6b8e23;
+            padding-bottom: 0.5rem;
+        }
+        
+        .anes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1.5rem;
+        }
+        
+        .ane {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            background-color: #f9f7f1;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        
+        .ane-img {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ane h3 {
+            color: #6b8e23;
+            margin: 0.5rem 0;
+        }
+        
+        .contact-info {
+            background-color: #f9f7f1;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+        
+        footer {
+            background-color: #6b8e23;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .banner {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="banner">De la Cox à l'âne</div>
+        <div class="tagline">Balades en calèche à Petit Suzay (27)</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#association">L'Association</a></li>
+            <li><a href="#anes">Nos Ânes</a></li>
+            <li><a href="#balades">Les Balades</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="intro">
+            <h1>Bienvenue à "De la Cox à l'âne"</h1>
+            <p>Découvrez la beauté de la campagne normande lors d'une balade paisible en calèche tirée par nos ânes. Une expérience authentique au cœur de la nature à Petit Suzay.</p>
+        </section>
+        
+        <div class="sections">
+            <section id="association" class="section">
+                <h2>Notre Association</h2>
+                <p>"De la Cox à l'âne" est une association locale située à Petit Suzay dans l'Eure (27). Nous proposons des balades en calèche avec nos ânes pour faire découvrir notre belle région à un rythme tranquille et respectueux de l'environnement.</p>
+                <p>Créée par passion pour ces animaux extraordinaires, notre association s'engage également dans la préservation et la valorisation du patrimoine rural normand.</p>
+            </section>
+            
+            <section id="anes" class="section">
+                <h2>Nos Compagnons</h2>
+                <p>Nos trois ânes sont les véritables stars de l'association. Doux, patients et attachants, ils adorent les promenades et les rencontres.</p>
+                
+                <div class="anes">
+                    <div class="ane">
+                        <div class="ane-img">
+                            <img src="/api/placeholder/250/200" alt="Voltaire l'âne">
+                        </div>
+                        <h3>Voltaire</h3>
+                        <p>Le plus sage et le plus âgé de nos compagnons. Son calme et son expérience rassurent les plus anxieux.</p>
+                    </div>
+                    
+                    <div class="ane">
+                        <div class="ane-img">
+                            <img src="/api/placeholder/250/200" alt="Miracle l'âne">
+                        </div>
+                        <h3>Miracle</h3>
+                        <p>Curieux et joueur, Miracle adore l'attention et les caresses. Il est particulièrement gentil avec les enfants.</p>
+                    </div>
+                    
+                    <div class="ane">
+                        <div class="ane-img">
+                            <img src="/api/placeholder/250/200" alt="Titane l'âne">
+                        </div>
+                        <h3>Titane</h3>
+                        <p>Le plus jeune et le plus énergique du trio. Son enthousiasme et sa vitalité sont contagieux !</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="sections">
+            <section id="balades" class="section">
+                <h2>Nos Balades</h2>
+                <p>Nous proposons différents circuits adaptés à tous les âges et toutes les envies :</p>
+                <ul>
+                    <li><strong>Balade Découverte</strong> (30 min) : Idéale pour les familles avec jeunes enfants</li>
+                    <li><strong>Promenade Champêtre</strong> (1h) : Pour découvrir les chemins bucoliques autour de Petit Suzay</li>
+                    <li><strong>Circuit Patrimoine</strong> (2h) : À la découverte du patrimoine local et des paysages normands</li>
+                    <li><strong>Balade au Crépuscule</strong> (1h30) : Une expérience magique au coucher du soleil (en saison)</li>
+                </ul>
+                <p>Possibilité d'organiser des événements spéciaux : anniversaires, fêtes locales, visites scolaires...</p>
+            </section>
+            
+            <section id="tarifs" class="section">
+                <h2>Tarifs</h2>
+                <p>Nos tarifs sont calculés selon la durée de la balade et le nombre de participants :</p>
+                <ul>
+                    <li>Balade Découverte : 10€ par personne</li>
+                    <li>Promenade Champêtre : 15€ par personne</li>
+                    <li>Circuit Patrimoine : 25€ par personne</li>
+                    <li>Balade au Crépuscule : 20€ par personne</li>
+                </ul>
+                <p><strong>Réductions :</strong></p>
+                <ul>
+                    <li>Enfants de moins de 10 ans : -50%</li>
+                    <li>Groupes (à partir de 5 personnes) : -10%</li>
+                    <li>Habitants de Petit Suzay : -15%</li>
+                </ul>
+                <p>Nous proposons également des forfaits pour les écoles et les associations. N'hésitez pas à nous contacter pour un devis personnalisé.</p>
+            </section>
+        </div>
+        
+        <section id="contact" class="section">
+            <h2>Nous Contacter</h2>
+            <p>Pour réserver une balade ou obtenir plus d'informations, n'hésitez pas à nous contacter :</p>
+            
+            <div class="contact-info">
+                <p><strong>Adresse :</strong> Association "De la Cox à l'âne", Petit Suzay, 27630 Vexin-sur-Epte</p>
+                <p><strong>Téléphone :</strong> 02.XX.XX.XX.XX</p>
+                <p><strong>Email :</strong> contact@delacoxalane.fr</p>
+                <p><strong>Horaires :</strong> Ouvert de mars à octobre, du mercredi au dimanche, de 10h à 18h</p>
+            </div>
+            
+            <p><em>Réservation fortement conseillée, surtout pendant la haute saison et les week-ends.</em></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Association "De la Cox à l'âne" - Petit Suzay (27)</p>
+        <p>Site réalisé avec ♥ pour partager notre passion des ânes et de la nature</p>
+    </footer>
+</body>
+</html>
